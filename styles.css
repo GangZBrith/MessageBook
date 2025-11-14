@@ -20,8 +20,6 @@ body {
 }
 
 .ebook-container {
-    width: 100%;
-    max-width: 1450px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,45 +109,46 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 15px 0 25px 7px;
+    padding: 50px 0 50px 7px;
 }
 
 .bookmark {
+    display: flex;
     background-color: #f8f1e5;
-    color: #5a4a3a;
-    width: 2.344vw;
-    height: 5.208vw;
-    writing-mode: vertical-rl;
+    color: white;
+    width: 5.258vw;
+    height: 3vw;
     font-family: 'NoonnuBasicGothicRegular';
     font-size: 0.82vw;
     border-radius: 0 5px 5px 0;
     box-shadow: 5px 3px 3px rgba(0,0,0,0.15);
     cursor: pointer;
-    padding: 2px 4px 2px 0;
-    line-height: 1.042vw;
+    padding: 2px;
     text-align: center;
+    justify-content: center;
+    align-items: center;
     text-orientation: upright;
     overflow: hidden;
     transition: all 0.3s;
 }
 
 .bookmark:hover, .bookmark.active {
-    width: 3.385vw !important;
+    width: 6.249vw;
 }
 
-.bookmark:nth-child(1) { transform: translateX(0); background-color: #F7E5FF; line-height: 0.7vw; }
-.bookmark:nth-child(2) { transform: translateX(3px); background: linear-gradient(#F7E5FF, #E4F0FE); line-height: 0.7vw; }
-.bookmark:nth-child(3) { transform: translateX(6px); background-color: #E4F0FE; }
-.bookmark:nth-child(4) { transform: translateX(9px); background: linear-gradient(#E4F0FE, #FFE4EB); word-spacing: 0.9vw; }
-.bookmark:nth-child(5) { transform: translateX(12px); background-color: #FFE4EB; }
-.bookmark:nth-child(6) { transform: translateX(15px); background: linear-gradient(#FFE4EB, #EFFFE5); }
-.bookmark:nth-child(7) { transform: translateX(18px); background-color: #EFFFE5; word-spacing: -0.521vw; }
+.bookmark:nth-child(1) { transform: translateX(0); background-color: #8182B8;}
+.bookmark:nth-child(2) { transform: translateX(3px); background-color: #8083BF;}
+.bookmark:nth-child(3) { transform: translateX(6px); background-color: #7E84C5;}
+.bookmark:nth-child(4) { transform: translateX(9px); background-color: #7D85CC;}
+.bookmark:nth-child(5) { transform: translateX(12px); background-color: #7C85D3;}
+.bookmark:nth-child(6) { transform: translateX(15px); background-color: #7A86D9;}
+.bookmark:nth-child(7) { transform: translateX(18px); background-color: #7987E0;}
 
 #pageCounter {
     position: fixed;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 20px;
+    right: 20px;
+    left: auto;
     background-color: rgba(0,0,0,0.5);
     color: white;
     padding: 5px 10px;
