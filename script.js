@@ -57,22 +57,30 @@ function updatePages() {
     }
 
     const isFirstPage = currentPage === 0;
+    const isLastPage = currentPage === 132;
 
     leftImage.src = images[currentPage];
     rightImage.src = images[currentPage + 1] || '';
 
     document.body.classList.toggle('first-page', isFirstPage);
+    document.body.classList.toggle('last-page', isLastPage);
 
     if (isFirstPage) {
         leftPage.style.visibility = 'hidden';
         rightImage.src = images[0];
+    } else if (isLastPage) {
+        rightPage.style.visibility = 'hidden';
+        leftImage.src = images[131];
     } else {
         leftPage.style.visibility = 'visible';
+        rightPage.style.visibility = 'visible';
         leftPage.style.display = 'flex';
+        rightPage.style.display = 'flex';
         leftImage.src = images[currentPage - 1];
         rightImage.src = images[currentPage] || '';
     }
 
+    console.log(currentPage)
     updatePageCounter();
     updateActiveBookmark();
 }
@@ -108,12 +116,10 @@ function handlePageNavigation(event) {
 
     if (isLeftPage && currentPage > 0) {
         currentPage -= 2;
-        console.log('이전페이지');
         updatePages();
     }
     else if (!isLeftPage && currentPage < images.length - 2) {
         currentPage += 2;
-        console.log('다음페이지');
         updatePages();
     }
 }

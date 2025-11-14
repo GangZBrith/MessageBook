@@ -184,7 +184,6 @@ body.first-page .page-layout {
 
 body.first-page .right-page {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), 0 -5px 15px rgba(0, 0, 0, 0.1);
-    max-height: 93vw;
     margin: auto;
 }
 
@@ -200,11 +199,37 @@ body.first-page .bookmark-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 15px 0 25px 7px;
+    padding: 50px 0 50px 7px;
 }
 
 body.first-page .bookmark:nth-child(n) {
     transform: translateX(-7px);
+}
+
+/* 마지막 페이지 */
+body.last-page .ebook-container {
+    background-image: none !important;
+}
+
+body.last-page .page-layout {
+    box-shadow: none;
+    justify-content: center;
+}
+
+body.last-page .left-page {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), 0 -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+body.last-page .left-page img {
+    object-fit: contain;
+}
+
+body.last-page .left-page::after {
+    display: none;
+}
+
+body.last-page .bookmark-container {
+    display: none;
 }
 
 @media (max-width: 768px) {
